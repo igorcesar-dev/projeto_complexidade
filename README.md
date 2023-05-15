@@ -10,4 +10,4 @@ Trata-se de um programa que monitora a entrada de 10 alunos em uma academia e re
 `node main.js`
 
 ## Link para o vídeo da explicação e funcionamento do código:
-https://drive.google.com/file/d/1JnZjB-MfcbaDHM9Y6Nne1ruWBOm-WN7j/view?usp=share_link
+https://drive.google.com/drive/folders/1E3QS9VccBSGe6LHXu8LJB69fG1Fj6V5e?usp=share_link
