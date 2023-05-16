@@ -1,4 +1,4 @@
-// (d.1) Função para imprimir a lista de alunos - Complexidade O(n);
+// (d.2) Função para imprimir a lista de alunos
 function imprimirAlunos(alunos) {
   console.log("Lista de alunos:");
   for (let i = 0; i < alunos.length; i++) {
@@ -7,7 +7,7 @@ function imprimirAlunos(alunos) {
   }
 }
 
-// (d.2) Função para imprimir a lista de leituras por aluno - Complexidade O(n^2);
+// (d.3) Função para imprimir a lista de leituras por aluno
 function imprimirLeiturasPorAluno(alunos) {
   console.log("Lista de leituras por aluno:");
   for (let i = 0; i < alunos.length; i++) {
@@ -19,8 +19,9 @@ function imprimirLeiturasPorAluno(alunos) {
         leituras += ", ";
       }
     }
-    console.log(`- Aluno - Id:${aluno.id}: ${leituras}`);
+    console.log(`- Aluno - ID:${aluno.id}: ${leituras}`);
   }
 }
 
 module.exports = { imprimirAlunos, imprimirLeiturasPorAluno };
+
