@@ -23,5 +23,5 @@ function imprimirLeiturasPorAluno(alunos) {
   }
 }
 
+// Exporta as funções para uso em outros módulos
 module.exports = { imprimirAlunos, imprimirLeiturasPorAluno };
-

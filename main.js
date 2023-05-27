@@ -3,23 +3,33 @@ const imprimir = require("./imprimir_leituras_thread.js");
 const ordenarLeituras = require("./ordenar_leituras_thread.js");
 const { exibirPermutacoesParalelo } = require("./permutacao_thread.js");
 
+// Função principal assíncrona
 async function main() {
   const str = "-";
   console.log(str.repeat(100));
 
+  // Gerar dados dos alunos de forma assíncrona
   const alunos = await gerarDados.gerarDadosAlunos(10);
 
-  const t1 = imprimir.imprimirAlunos(alunos);
+  // Imprimir lista de alunos
+  imprimir.imprimirAlunos(alunos);
   console.log(str.repeat(100));
-  const t2 = imprimir.imprimirLeiturasPorAluno(alunos);
+
+  // Imprimir lista de leituras por aluno
+  imprimir.imprimirLeiturasPorAluno(alunos);
   console.log(str.repeat(100));
-  const t3 = ordenarLeituras.ordenarLeiturasPorAluno(alunos);
-  const t4 = imprimir.imprimirLeiturasPorAluno(alunos);
 
-  const t5 = exibirPermutacoesParalelo(alunos);
+  // Ordenar leituras de cada aluno em ordem crescente
+  ordenarLeituras.ordenarLeiturasPorAluno(alunos);
 
-  await Promise.all([t1, t2, t3, t4, t5]); // Espera a execução de todas as Promises (t1, t2, t3, t4 e t5)
+  // Imprimir lista de leituras ordenadas por aluno
+  imprimir.imprimirLeiturasPorAluno(alunos);
+
+  // Exibir permutações paralelamente
+  await exibirPermutacoesParalelo(alunos);
+
   console.log(str.repeat(100));
 }
 
+// Chama a função principal
 main();
