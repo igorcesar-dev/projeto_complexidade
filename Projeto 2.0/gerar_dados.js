@@ -34,7 +34,7 @@ async function gerarDadosAlunos(n) {
         } else {
           reject(new Error("Horário inválido gerado."));
         }
-      }, 5000);
+      }, Math.random() * 1000);
     });
   }
 
