@@ -25,6 +25,8 @@ async function main() {
   // Imprimir lista de leituras ordenadas por aluno
   imprimir.imprimirLeiturasPorAluno(alunos);
 
+  
+
   // Exibir permutações paralelamente
   await exibirPermutacoesParalelo(alunos);
 
