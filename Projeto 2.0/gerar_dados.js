@@ -1,5 +1,3 @@
-// ARQUIVO gerar_dados.js
-
 // Classe Observador para notificar os assinantes
 class Observador {
   constructor() {

@@ -1,14 +1,15 @@
-// ARQUIVO borda.js
-
+// Classe Borda representa uma borda de transferência de dados
 class Borda {
     constructor() {
-        this.leituras = [];
+        this.leituras = []; // Array para armazenar as leituras
     }
 
+    // Método para receber as leituras de um aluno e adicioná-las à borda
     receberLeitura(alunoId, leituras) {
         this.leituras.push(...leituras.map((leitura) => ({ alunoId, leitura })));
     }
 
+    // Método para ordenar as leituras em ordem crescente de horário
     ordenarLeituras() {
         this.leituras.sort((a, b) => {
             const [h1Hora, h1Minuto] = a.leitura.split(":");
@@ -29,6 +30,7 @@ class Borda {
         });
     }
 
+    // Método para transferir as leituras para a nuvem
     transferirLeiturasParaNuvem() {
         this.ordenarLeituras();
         console.log("Transferindo leituras para a nuvem:");
