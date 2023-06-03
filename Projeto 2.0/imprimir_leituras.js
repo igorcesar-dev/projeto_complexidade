@@ -1,28 +1,21 @@
-// (d.2) Função para imprimir a lista de alunos
+// ARQUIVO imprimir_leituras.js
+
 function imprimirAlunos(alunos) {
-    console.log("Lista de alunos:");
-    for (let i = 0; i < alunos.length; i++) {
-      const aluno = alunos[i];
-      console.log(`- Aluno - ID:${aluno.id}`);
-    }
+  console.log("Alunos:");
+  alunos.forEach((aluno) => {
+    console.log(`Aluno ${ aluno.id }: `);
+    console.log(aluno.leituras);
+  });
+}
+
+function imprimirLeiturasPorAluno(alunos) {
+  console.log("Leituras por aluno:");
+  alunos.forEach((aluno) => {
+    console.log(`Aluno ${ aluno.id }: `);
+    aluno.leituras.forEach((leitura, index) => {
+      console.log(`Leitura ${ index + 1}: ${ leitura }`);
+  });
+});
   }
-  
-  // (d.3) Função para imprimir a lista de leituras por aluno
-  function imprimirLeiturasPorAluno(alunos) {
-    console.log("Lista de leituras por aluno:");
-    for (let i = 0; i < alunos.length; i++) {
-      const aluno = alunos[i];
-      let leituras = "";
-      for (let j = 0; j < aluno.leituras.length; j++) {
-        leituras += aluno.leituras[j];
-        if (j !== aluno.leituras.length - 1) {
-          leituras += ", ";
-        }
-      }
-      console.log(`- Aluno - ID:${aluno.id}: ${leituras}`);
-    }
-  }
-  
-  // Exporta as funções para uso em outros módulos
-  module.exports = { imprimirAlunos, imprimirLeiturasPorAluno };
-  
+
+module.exports = { imprimirAlunos, imprimirLeiturasPorAluno };
